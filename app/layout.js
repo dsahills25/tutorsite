@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="google-site-verification" content="googlee9dd0ec360e22a4c.html" />
+        <meta name="google-site-verification" content="googlee9dd0ec360e22a4c" />
   
         <script type="application/ld-json">
           {JSON.stringify({
