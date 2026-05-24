@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Home Tutors in Delhi NCR | Verified Teachers - TutorMatch',
+  title: 'Best Home Tutors in Delhi NCR - Find Now!',
   description: 'Find top-rated home tutors in Delhi, Noida, Gurgaon, Ghaziabad for CBSE, ICSE, State Boards',
 }
 
