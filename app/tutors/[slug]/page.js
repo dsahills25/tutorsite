@@ -3,11 +3,7 @@ export const metadata = {
   description: 'Professional home tutor for personalized learning',
 };
 
-// THIS IS THE FIX - Generate static pages at build time
 export async function generateStaticParams() {
-  // For MVP, we generate 5 sample tutor pages
-  // Later, you'll fetch this from Google Sheets
-  
   const tutors = [
     { slug: 'amit-sharma-delhi-math' },
     { slug: 'priya-singh-delhi-english' },
@@ -15,15 +11,12 @@ export async function generateStaticParams() {
     { slug: 'neha-gupta-prayagraj-math' },
     { slug: 'vikram-singh-prayagraj-english' },
   ];
-
   return tutors;
 }
 
-// THIS IS THE PAGE TEMPLATE
 export default function TutorProfile({ params }) {
   const { slug } = params;
 
-  // Sample tutor data (later this comes from Google Sheets)
   const tutorDatabase = {
     'amit-sharma-delhi-math': {
       name: "Amit Sharma",
@@ -134,7 +127,6 @@ export default function TutorProfile({ params }) {
     }
   };
 
-  // Get tutor data from database
   const tutor = tutorDatabase[slug] || {
     name: "Tutor Not Found",
     subject: "Unknown",
@@ -150,7 +142,6 @@ export default function TutorProfile({ params }) {
   return (
     <main className="min-h-screen bg-slate-50 py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
         <header className="bg-white rounded-lg p-8 mb-8">
           <h1 className="text-4xl font-black text-slate-900">
             {tutor.name}
@@ -172,7 +163,6 @@ export default function TutorProfile({ params }) {
           </div>
         </header>
 
-        {/* About */}
         <section className="bg-white rounded-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">About</h2>
           <p className="text-lg text-slate-700">
@@ -180,7 +170,6 @@ export default function TutorProfile({ params }) {
           </p>
         </section>
 
-        {/* Qualifications */}
         <section className="bg-white rounded-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Qualifications</h2>
           <ul className="space-y-3">
@@ -193,7 +182,6 @@ export default function TutorProfile({ params }) {
           </ul>
         </section>
 
-        {/* Reviews */}
         {tutor.reviews && tutor.reviews.length > 0 && (
           <section className="bg-white rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">
@@ -220,7 +208,6 @@ export default function TutorProfile({ params }) {
           </section>
         )}
 
-        {/* CTA */}
         <section className="bg-indigo-600 text-white rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">
             Book Your First Class
