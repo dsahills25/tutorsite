@@ -3,41 +3,148 @@ export const metadata = {
   description: 'Professional home tutor for personalized learning',
 };
 
-// This is a TEMPLATE page
-// It shows ANY tutor based on the [slug]
-// Example: /tutors/amit-sharma-delhi becomes [slug] = "amit-sharma-delhi"
+// THIS IS THE FIX - Generate static pages at build time
+export async function generateStaticParams() {
+  // For MVP, we generate 5 sample tutor pages
+  // Later, you'll fetch this from Google Sheets
+  
+  const tutors = [
+    { slug: 'amit-sharma-delhi-math' },
+    { slug: 'priya-singh-delhi-english' },
+    { slug: 'raj-kumar-delhi-science' },
+    { slug: 'neha-gupta-prayagraj-math' },
+    { slug: 'vikram-singh-prayagraj-english' },
+  ];
 
+  return tutors;
+}
+
+// THIS IS THE PAGE TEMPLATE
 export default function TutorProfile({ params }) {
   const { slug } = params;
 
-  // In a real app, you'd fetch tutor data from Google Sheets
-  // For now, we'll show a template
-  
-  const tutor = {
-    name: "Amit Sharma",
-    subject: "Mathematics",
-    city: "Delhi",
-    experience: 5,
-    rating: 4.8,
-    rate: 300,
-    bio: "Specialized in CBSE Mathematics with proven track record of student improvement",
-    qualifications: [
-      "B.Sc Mathematics from Delhi University",
-      "5 years teaching experience",
-      "100+ students taught successfully"
-    ],
-    reviews: [
-      {
-        rating: 5,
-        text: "Excellent tutor, very patient and explains well",
-        author: "Parent A"
-      },
-      {
-        rating: 5,
-        text: "My son improved from 60% to 85% in 3 months",
-        author: "Parent B"
-      }
-    ]
+  // Sample tutor data (later this comes from Google Sheets)
+  const tutorDatabase = {
+    'amit-sharma-delhi-math': {
+      name: "Amit Sharma",
+      subject: "Mathematics",
+      city: "Delhi",
+      experience: 5,
+      rating: 4.8,
+      rate: 300,
+      bio: "Specialized in CBSE Mathematics with proven track record of student improvement",
+      qualifications: [
+        "B.Sc Mathematics from Delhi University",
+        "5 years teaching experience",
+        "100+ students taught successfully"
+      ],
+      reviews: [
+        {
+          rating: 5,
+          text: "Excellent tutor, very patient and explains well",
+          author: "Parent A"
+        },
+        {
+          rating: 5,
+          text: "My son improved from 60% to 85% in 3 months",
+          author: "Parent B"
+        }
+      ]
+    },
+    'priya-singh-delhi-english': {
+      name: "Priya Singh",
+      subject: "English",
+      city: "Delhi",
+      experience: 3,
+      rating: 4.6,
+      rate: 250,
+      bio: "English tutor focusing on grammar, comprehension, and creative writing",
+      qualifications: [
+        "M.A. English Literature",
+        "3 years teaching experience",
+        "50+ students taught"
+      ],
+      reviews: [
+        {
+          rating: 5,
+          text: "Great at explaining grammar in simple ways",
+          author: "Parent C"
+        }
+      ]
+    },
+    'raj-kumar-delhi-science': {
+      name: "Raj Kumar",
+      subject: "Science",
+      city: "Delhi",
+      experience: 4,
+      rating: 4.7,
+      rate: 320,
+      bio: "Science tutor with focus on practical understanding and NCERT curriculum",
+      qualifications: [
+        "B.Sc Physics, Chemistry, Biology",
+        "4 years teaching experience"
+      ],
+      reviews: [
+        {
+          rating: 5,
+          text: "Makes science fun and easy to understand",
+          author: "Parent D"
+        }
+      ]
+    },
+    'neha-gupta-prayagraj-math': {
+      name: "Neha Gupta",
+      subject: "Mathematics",
+      city: "Prayagraj",
+      experience: 6,
+      rating: 4.9,
+      rate: 280,
+      bio: "Specialized in problem-solving and concept clarity for competitive exams",
+      qualifications: [
+        "B.Tech Computer Science",
+        "6 years teaching experience"
+      ],
+      reviews: [
+        {
+          rating: 5,
+          text: "Best math tutor in Prayagraj!",
+          author: "Parent E"
+        }
+      ]
+    },
+    'vikram-singh-prayagraj-english': {
+      name: "Vikram Singh",
+      subject: "English",
+      city: "Prayagraj",
+      experience: 2,
+      rating: 4.5,
+      rate: 200,
+      bio: "English tutor helping students build confidence in communication",
+      qualifications: [
+        "M.A. English",
+        "2 years teaching experience"
+      ],
+      reviews: [
+        {
+          rating: 5,
+          text: "Very friendly and approachable",
+          author: "Parent F"
+        }
+      ]
+    }
+  };
+
+  // Get tutor data from database
+  const tutor = tutorDatabase[slug] || {
+    name: "Tutor Not Found",
+    subject: "Unknown",
+    city: "Unknown",
+    experience: 0,
+    rating: 0,
+    rate: 0,
+    bio: "This tutor profile doesn't exist yet",
+    qualifications: [],
+    reviews: []
   };
 
   return (
@@ -87,29 +194,31 @@ export default function TutorProfile({ params }) {
         </section>
 
         {/* Reviews */}
-        <section className="bg-white rounded-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">
-            Student Reviews ({tutor.reviews.length})
-          </h2>
-          <div className="space-y-4">
-            {tutor.reviews.map((review, idx) => (
-              <div
-                key={idx}
-                className="border-l-4 border-indigo-600 pl-4 py-2"
-              >
-                <p className="text-yellow-500 mb-2">
-                  {"⭐".repeat(review.rating)}
-                </p>
-                <p className="text-slate-700 italic mb-2">
-                  "{review.text}"
-                </p>
-                <p className="text-slate-500 text-sm">
-                  — {review.author}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+        {tutor.reviews && tutor.reviews.length > 0 && (
+          <section className="bg-white rounded-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Student Reviews ({tutor.reviews.length})
+            </h2>
+            <div className="space-y-4">
+              {tutor.reviews.map((review, idx) => (
+                <div
+                  key={idx}
+                  className="border-l-4 border-indigo-600 pl-4 py-2"
+                >
+                  <p className="text-yellow-500 mb-2">
+                    {"⭐".repeat(review.rating)}
+                  </p>
+                  <p className="text-slate-700 italic mb-2">
+                    "{review.text}"
+                  </p>
+                  <p className="text-slate-500 text-sm">
+                    — {review.author}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* CTA */}
         <section className="bg-indigo-600 text-white rounded-lg p-8 text-center">
