@@ -1,58 +1,154 @@
 export const metadata = {
   title: 'Home Tutors in Prayagraj | Verified Teachers - TutorMatch',
-  description: 'Find top-rated home tutors in Prayagraj, Civil Lines, Katra for CBSE, ICSE, State Boards',
-}
+  description: 'Find top-rated home tutors in Prayagraj, Civil Lines, Katra for CBSE, ICSE, State Boards. Only verified tutors. Free first class.',
+};
 
 export default function PrayagrajTutors() {
   return (
-    <main>
-      <script type="application/ld-json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "TutorMatch Prayagraj",
-          "description": "Premium 1-on-1 home tutor matching service",
-          "url": "https://tutorsite.vercel.app/prayagraj",
-          "areaServed": [
-            { "@type": "AdministrativeArea", "name": "Prayagraj" }
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Prayagraj",
-            "addressRegion": "Uttar Pradesh",
-            "addressCountry": "IN"
-          }
-        })}
-      </script>
-
-      <header style={{ textAlign: 'center', padding: '4rem 2rem', borderBottom: '1px solid #e2e8f0' }}>
-        <h1>Verified Home Tutors in <span className="highlight">Prayagraj</span></h1>
-        <p style={{ fontSize: '1.25rem', color: '#64748b', marginTop: '1rem', maxWidth: '600px', margin: '1rem auto' }}>
-          Connect with top-rated 1-on-1 teachers for CBSE, ICSE, and State Boards across Civil Lines, Katra, and major areas in Prayagraj.
+    <main className="min-h-screen bg-slate-50">
+      {/* HERO SECTION */}
+      <header className="max-w-7xl mx-auto px-4 py-16 text-center">
+        <h1 className="text-5xl font-black text-slate-900 tracking-tight">
+          Verified Home Tutors in <span className="text-indigo-600">Prayagraj</span>
+        </h1>
+        <p className="mt-6 text-xl text-slate-600 max-w-2xl mx-auto">
+          Connect with top-rated 1-on-1 teachers for CBSE, ICSE, and State Boards across Civil Lines, Katra, and surrounding areas.
         </p>
       </header>
 
-      <section className="container" style={{ padding: '3rem 0' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Neighborhoods Covered</h2>
-        <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
-          <div className="card" style={{ textAlign: 'center' }}>Civil Lines</div>
-          <div className="card" style={{ textAlign: 'center' }}>Katra</div>
-          <div className="card" style={{ textAlign: 'center' }}>Allahapur</div>
-          <div className="card" style={{ textAlign: 'center' }}>Jhalwa</div>
+      {/* AREAS COVERED */}
+      <section className="bg-white border-y border-slate-200 py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-slate-900 text-center mb-8">
+            Neighborhoods Covered in Prayagraj
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <p className="text-slate-600 font-medium">Civil Lines</p>
+            </div>
+            <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <p className="text-slate-600 font-medium">Katra</p>
+            </div>
+            <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <p className="text-slate-600 font-medium">Allahapur</p>
+            </div>
+            <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <p className="text-slate-600 font-medium">Jhalwa</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="container" style={{ padding: '3rem 0', background: '#f1f5f9', borderRadius: '12px' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Classes & Boards</h2>
-        <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <ul style={{ listStyle: 'none' }}>
-            <li style={{ padding: '0.75rem', borderBottom: '1px solid #e2e8f0' }}>✓ CBSE (Class 1-12)</li>
-            <li style={{ padding: '0.75rem', borderBottom: '1px solid #e2e8f0' }}>✓ ICSE (Class 1-12)</li>
-            <li style={{ padding: '0.75rem', borderBottom: '1px solid #e2e8f0' }}>✓ State Board</li>
-            <li style={{ padding: '0.75rem' }}>✓ JEE / NEET Preparation</li>
-          </ul>
+      {/* TRUST STATS */}
+      <section className="bg-slate-100 py-12 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div>
+              <p className="text-4xl font-black text-indigo-600">80+</p>
+              <p className="text-slate-600 mt-2">Tutors Screened</p>
+            </div>
+            <div>
+              <p className="text-4xl font-black text-indigo-600">4.6★</p>
+              <p className="text-slate-600 mt-2">Average Rating</p>
+            </div>
+            <div>
+              <p className="text-4xl font-black text-indigo-600">90%</p>
+              <p className="text-slate-600 mt-2">Success Rate</p>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* PARENT FORM SECTION */}
+      <section className="bg-white py-12 px-4">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 text-center mb-2">
+            Find Your Perfect Tutor
+          </h2>
+          <p className="text-center text-slate-600 mb-8">
+            Tell us what you need. We'll match you within 24 hours.
+          </p>
+          
+          {/* EMBEDDED TALLY FORM */}
+          <iframe
+            data-tally-src="https://tally.so/r/D4M17X"
+            width="100%"
+            height="600"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
+            title="Parent Registration Form"
+          ></iframe>
+          <script async src="https://cdn.tally.so/tally.js"></script>
+        </div>
+      </section>
+
+      {/* SUBJECTS */}
+      <section className="bg-slate-50 py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-slate-900 text-center mb-8">
+            Classes & Boards
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-lg border border-slate-200">
+              <p className="font-semibold text-slate-900">CBSE</p>
+              <p className="text-slate-600 text-sm mt-2">Classes 1-12</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg border border-slate-200">
+              <p className="font-semibold text-slate-900">ICSE</p>
+              <p className="text-slate-600 text-sm mt-2">Classes 1-12</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg border border-slate-200">
+              <p className="font-semibold text-slate-900">State Board</p>
+              <p className="text-slate-600 text-sm mt-2">All classes</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg border border-slate-200">
+              <p className="font-semibold text-slate-900">JEE / NEET</p>
+              <p className="text-slate-600 text-sm mt-2">Preparation courses</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="bg-white py-12 px-4 border-t border-slate-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-slate-900 text-center mb-8">
+            How It Works
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+            <div className="text-center">
+              <div className="bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto font-bold">1</div>
+              <p className="mt-4 font-semibold">Submit Request</p>
+              <p className="text-slate-600 text-sm mt-2">Tell us your requirements</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto font-bold">2</div>
+              <p className="mt-4 font-semibold">Get Matches</p>
+              <p className="text-slate-600 text-sm mt-2">Within 24 hours</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto font-bold">3</div>
+              <p className="mt-4 font-semibold">Trial Class</p>
+              <p className="text-slate-600 text-sm mt-2">100% FREE</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto font-bold">4</div>
+              <p className="mt-4 font-semibold">Confirm Match</p>
+              <p className="text-slate-600 text-sm mt-2">Start learning!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-indigo-600 text-white py-12 px-4 text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Find Your Tutor?</h2>
+        <p className="text-lg mb-6 opacity-90">Fill the form above. We'll connect you with verified tutors in 24 hours.</p>
+        <a href="/faq" className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-bold hover:bg-slate-100">
+          View FAQs
+        </a>
+      </section>
     </main>
-  )
+  );
 }
