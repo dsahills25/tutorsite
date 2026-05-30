@@ -24,11 +24,11 @@ export default function TutorProfile({ params }) {
       experience: 5,
       rating: 4.8,
       rate: 300,
-      bio: 'Specialized in CBSE Mathematics with proven track record',
-      qualifications: ['B.Sc Mathematics', '5 years experience', '100+ students'],
+      bio: 'Specialized in CBSE Mathematics with proven track record of student improvement',
+      qualifications: ['B.Sc Mathematics from Delhi University', '5 years teaching experience', '100+ students taught'],
       reviews: [
-        { rating: 5, text: 'Excellent tutor, very patient', author: 'Parent A' },
-        { rating: 5, text: 'My son improved from 60% to 85%', author: 'Parent B' },
+        { rating: 5, text: 'Excellent tutor, very patient and explains well', author: 'Parent A' },
+        { rating: 5, text: 'My son improved from 60% to 85% in 3 months', author: 'Parent B' },
       ],
     },
     'priya-singh-delhi-english': {
@@ -38,9 +38,9 @@ export default function TutorProfile({ params }) {
       experience: 3,
       rating: 4.6,
       rate: 250,
-      bio: 'English tutor focusing on grammar and comprehension',
-      qualifications: ['M.A. English Literature', '3 years experience'],
-      reviews: [{ rating: 5, text: 'Great at explaining grammar', author: 'Parent C' }],
+      bio: 'English tutor focusing on grammar, comprehension, and creative writing',
+      qualifications: ['M.A. English Literature', '3 years teaching experience', '50+ students'],
+      reviews: [{ rating: 5, text: 'Great at explaining grammar in simple ways', author: 'Parent C' }],
     },
     'raj-kumar-delhi-science': {
       name: 'Raj Kumar',
@@ -49,9 +49,9 @@ export default function TutorProfile({ params }) {
       experience: 4,
       rating: 4.7,
       rate: 320,
-      bio: 'Science tutor with focus on NCERT curriculum',
-      qualifications: ['B.Sc Physics, Chemistry, Biology', '4 years experience'],
-      reviews: [{ rating: 5, text: 'Makes science fun', author: 'Parent D' }],
+      bio: 'Science tutor with focus on practical understanding and NCERT curriculum',
+      qualifications: ['B.Sc Physics, Chemistry, Biology', '4 years teaching experience'],
+      reviews: [{ rating: 5, text: 'Makes science fun and easy to understand', author: 'Parent D' }],
     },
     'neha-gupta-prayagraj-math': {
       name: 'Neha Gupta',
@@ -60,9 +60,9 @@ export default function TutorProfile({ params }) {
       experience: 6,
       rating: 4.9,
       rate: 280,
-      bio: 'Specialized in problem-solving and competitive exams',
-      qualifications: ['B.Tech Computer Science', '6 years experience'],
-      reviews: [{ rating: 5, text: 'Best math tutor!', author: 'Parent E' }],
+      bio: 'Specialized in problem-solving and concept clarity for competitive exams',
+      qualifications: ['B.Tech Computer Science', '6 years teaching experience'],
+      reviews: [{ rating: 5, text: 'Best math tutor in Prayagraj!', author: 'Parent E' }],
     },
     'vikram-singh-prayagraj-english': {
       name: 'Vikram Singh',
@@ -71,9 +71,9 @@ export default function TutorProfile({ params }) {
       experience: 2,
       rating: 4.5,
       rate: 200,
-      bio: 'English tutor helping students build communication skills',
-      qualifications: ['M.A. English', '2 years experience'],
-      reviews: [{ rating: 5, text: 'Very friendly', author: 'Parent F' }],
+      bio: 'English tutor helping students build confidence in communication',
+      qualifications: ['M.A. English', '2 years teaching experience'],
+      reviews: [{ rating: 5, text: 'Very friendly and approachable', author: 'Parent F' }],
     },
   };
 
@@ -84,7 +84,6 @@ export default function TutorProfile({ params }) {
       <main className="min-h-screen bg-slate-50 py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-slate-900">Tutor Not Found</h1>
-          <p className="text-slate-600 mt-4">This tutor profile does not exist yet.</p>
         </div>
       </main>
     );
@@ -98,6 +97,7 @@ export default function TutorProfile({ params }) {
           <p className="text-xl text-indigo-600 font-semibold mt-2">
             {tutor.subject} Tutor in {tutor.city}
           </p>
+
           <div className="flex gap-4 mt-4 flex-wrap">
             <span className="bg-slate-100 px-4 py-2 rounded">⭐ {tutor.rating}/5</span>
             <span className="bg-slate-100 px-4 py-2 rounded">💼 {tutor.experience} yrs</span>
@@ -139,7 +139,7 @@ export default function TutorProfile({ params }) {
         <section className="bg-indigo-600 text-white rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Book Your First Class</h2>
           <p className="text-lg mb-6">100% FREE • No commitment</p>
-          <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-bold">
+          <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-bold hover:bg-slate-100">
             Request This Tutor
           </button>
         </section>
