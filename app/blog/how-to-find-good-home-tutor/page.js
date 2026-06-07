@@ -2,7 +2,6 @@ export const metadata = {
   title: 'How to Find a Good Home Tutor - Complete Guide | TutorMatch',
   description: 'Step-by-step guide to finding the perfect home tutor. What to ask, red flags to avoid, pricing guide for Delhi NCR and Prayagraj.',
 };
-
 export default function BlogPost() {
   return (
     <main className="min-h-screen bg-white py-12 px-4">
@@ -16,7 +15,6 @@ export default function BlogPost() {
             <span>⏱️ 8 min read</span>
           </div>
         </header>
-
         <div className="space-y-8 text-slate-700 leading-relaxed">
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Why Home Tutoring Matters</h2>
@@ -24,7 +22,6 @@ export default function BlogPost() {
               Home tutoring provides personalized, one-on-one attention that classroom teaching can't match. Each child learns differently, and a good tutor adapts to your child's pace, strengths, and weaknesses.
             </p>
           </section>
-
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Red Flags to Avoid</h2>
             <ul className="space-y-2 list-disc list-inside">
@@ -35,7 +32,6 @@ export default function BlogPost() {
               <li><strong>No trial class</strong> - Always request a free trial first class</li>
             </ul>
           </section>
-
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Questions to Ask</h2>
             <ol className="space-y-2 list-decimal list-inside">
@@ -47,7 +43,6 @@ export default function BlogPost() {
               <li>Can we do a free 30-minute trial class first?</li>
             </ol>
           </section>
-
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Pricing Guide</h2>
             <p className="font-semibold mb-3">Delhi NCR Average Rates:</p>
@@ -64,7 +59,6 @@ export default function BlogPost() {
               <li>Languages: ₹100-200/hour</li>
             </ul>
           </section>
-
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4">How to Evaluate a Match</h2>
             <p className="mb-3">After the trial class, ask yourself:</p>
@@ -76,7 +70,6 @@ export default function BlogPost() {
               <li>Are they flexible with schedule?</li>
             </ul>
           </section>
-
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Getting Started</h2>
             <p>
@@ -84,7 +77,6 @@ export default function BlogPost() {
             </p>
           </section>
         </div>
-
         <div className="mt-12 bg-slate-100 rounded-lg p-8 text-center">
           <h3 className="text-2xl font-bold text-slate-900 mb-4">
             Ready to find a tutor?
