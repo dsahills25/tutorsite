@@ -73,7 +73,8 @@ export default function FAQ() {
             Contact us directly - we're here to help!
           </p>
           
-            href="mailto:support@tutormatch.com"
+          
+          <a  href="mailto:support@tutormatch.com"
             className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700"
           >
             Send us a message
