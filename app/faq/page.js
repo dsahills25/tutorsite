@@ -48,10 +48,9 @@ export default function FAQ() {
         <p className="text-lg text-slate-600 mb-12">
           Get answers to common questions about TutorMatch
         </p>
-
         <div className="space-y-6">
           {faqs.map((faq, idx) => (
-            <div 
+            <div
               key={idx}
               className="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg transition"
             >
@@ -64,7 +63,6 @@ export default function FAQ() {
             </div>
           ))}
         </div>
-
         <div className="mt-12 bg-indigo-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">
             Didn't find your answer?
@@ -73,8 +71,7 @@ export default function FAQ() {
             Contact us directly - we're here to help!
           </p>
           
-          
-          <a  href="mailto:support@tutormatch.com"
+            href="mailto:support@tutormatch.com"
             className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700"
           >
             Send us a message
