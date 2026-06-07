@@ -57,7 +57,6 @@ export default function BlogPost() {
               <li>Languages: ₹200-350/hour</li>
               <li>Competitive exam prep (JEE/NEET): ₹500-800/hour</li>
             </ul>
-            
             <p className="font-semibold mb-3">Prayagraj Average Rates:</p>
             <ul className="space-y-1 list-disc list-inside">
               <li>Math/Science: ₹200-300/hour</li>
