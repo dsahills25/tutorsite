@@ -6,7 +6,7 @@ export default function FAQ() {
   const faqs = [
     {
       question: "How much should I pay a home tutor?",
-      answer: "In Delhi NCR, rates range from ₹250-500/hour depending on subject and experience. In Prayagraj, rates are typically ₹200-350/hour. Experienced tutors with 5+ years charge more."
+      answer: "In Delhi NCR, rates range from Rs 250-500/hour depending on subject and experience. In Prayagraj, rates are typically Rs 200-350/hour. Experienced tutors with 5+ years charge more."
     },
     {
       question: "How long does it take to find a tutor?",
@@ -34,7 +34,7 @@ export default function FAQ() {
     },
     {
       question: "Do you guarantee improved grades?",
-      answer: "While we can't guarantee grades, 92% of our students show improvement within 3 months. Results depend on student commitment and consistency."
+      answer: "While we cannot guarantee grades, 92% of our students show improvement within 3 months. Results depend on student commitment and consistency."
     }
   ];
   return (
@@ -66,12 +66,9 @@ export default function FAQ() {
             Didn't find your answer?
           </h2>
           <p className="text-slate-700 mb-4">
-            Contact us directly - we're here to help!
+            Contact us directly - we are here to help!
           </p>
-          
-            href="mailto:support@tutormatch.com"
-            className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700"
-          >
+          <a href="mailto:support@tutormatch.com" className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700">
             Send us a message
           </a>
         </div>
