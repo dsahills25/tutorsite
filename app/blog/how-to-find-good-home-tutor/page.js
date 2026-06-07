@@ -19,7 +19,7 @@ export default function BlogPost() {
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Why Home Tutoring Matters</h2>
             <p>
-              Home tutoring provides personalized, one-on-one attention that classroom teaching can't match. Each child learns differently, and a good tutor adapts to your child's pace, strengths, and weaknesses.
+              Home tutoring provides personalized, one-on-one attention that classroom teaching can't match. Each child learns differently, and a good tutor adapts to your child's pace, strengths,[...]
             </p>
           </section>
           <section>
@@ -73,7 +73,7 @@ export default function BlogPost() {
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Getting Started</h2>
             <p>
-              The best way to find a good tutor is through a verified platform. At TutorMatch, we screen every tutor personally - ID verified, degree checked, and interview conducted. You get the best without the hassle of searching.
+              The best way to find a good tutor is through a verified platform. At TutorMatch, we screen every tutor personally - ID verified, degree checked, and interview conducted. You get the [...]
             </p>
           </section>
         </div>
@@ -82,13 +82,13 @@ export default function BlogPost() {
             Ready to find a tutor?
           </h3>
           <div className="flex gap-4 justify-center flex-wrap">
-            
+            <a
               href="/delhi-ncr"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700"
             >
               Delhi NCR
             </a>
-            
+            <a
               href="/prayagraj"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700"
             >
