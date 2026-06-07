@@ -82,16 +82,10 @@ export default function BlogPost() {
             Ready to find a tutor?
           </h3>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a
-              href="/delhi-ncr"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700"
-            >
+            <a href="/delhi-ncr" className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700">
               Delhi NCR
             </a>
-            <a
-              href="/prayagraj"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700"
-            >
+            <a href="/prayagraj" className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700">
               Prayagraj
             </a>
           </div>
