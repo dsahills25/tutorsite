@@ -2,7 +2,6 @@ export const metadata = {
   title: 'FAQ - Frequently Asked Questions | TutorMatch',
   description: 'Get answers to common questions about finding home tutors in Delhi NCR and Prayagraj',
 };
-
 export default function FAQ() {
   const faqs = [
     {
@@ -38,7 +37,6 @@ export default function FAQ() {
       answer: "While we can't guarantee grades, 92% of our students show improvement within 3 months. Results depend on student commitment and consistency."
     }
   ];
-
   return (
     <main className="min-h-screen bg-slate-50 py-12 px-4">
       <div className="max-w-4xl mx-auto">
