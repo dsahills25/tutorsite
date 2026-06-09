@@ -1,5 +1,6 @@
 import './globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata = {
   title: 'TutorMatch - Verified Home Tutors in Delhi NCR & Prayagraj',
@@ -57,6 +58,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
